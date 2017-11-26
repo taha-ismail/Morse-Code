@@ -25,5 +25,6 @@ public:
 	void insert_code(char message, string code);
 	void insert_code(BTNode *&new_node, char message, string code, bool is_last);
 	bool leafNode(BTNode *node);
+	bool lessFour(string::size_type a);
 };
 #endif

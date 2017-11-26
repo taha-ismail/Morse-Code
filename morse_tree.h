@@ -26,7 +26,7 @@ class BST
                       {
                          root = nullptr;
                       }
-                         void Insert(BTNode *&b, string letter, string code)
+                      void Insert(BTNode *&b, string letter, string code)
                       {
                            if(b == nullptr){
                               
@@ -37,7 +37,7 @@ class BST
                          if(b->letter < letter) Insert(b->right, letter, code);
                         }
                         
-						void Insert(string letter, string code){Insert(root, letter, code);}
+			void Insert(string letter, string code){Insert(root, letter, code);}
                         void display_pre_order(BTNode *b)
                         {
                         if(b != nullptr)
@@ -48,16 +48,14 @@ class BST
                         display_in_order(b->right);
                         }
                         }
-                        
-						
-						void display_in_order(BTNode *b)
+                        			
+			void display_in_order(BTNode *b)
                         {
                         if(b!= nullptr)
                         {
-                                        
-                                        display_in_order(b->left);
-                                        cout << b->letter << "\t";
-                                        display_in_order(b->right);
+   				display_in_order(b->left);
+                                cout << b->letter << "\t";
+                                display_in_order(b->right);
                                 }
                         }
                         

@@ -45,7 +45,9 @@ void BinaryTree::insert_code(BinaryTreeNode *&node, char char_value, string mors
 
 string BinaryTree::decode(string users_morse_string, bool added_node) {   //That function will decode the input using BST and searching algoriyhm 
 	/*
-	
+	This functiond ecodes the user entered string.
+	Input: morse code, node
+	output: Decoded string
 	*/
 	string result = "";
 	BinaryTreeNode *node = node_root;
@@ -79,7 +81,10 @@ string BinaryTree::decode(string users_morse_string, bool added_node) {   //That
 }
 
 void BinaryTree::insert_code(char char_value, string morse_value) {
-	//function to insert the node in Binary search Tree
+	/*
+	function to insert the root node in Binary search Tree
+	input: character, morse code
+	*/
 	if (!node_root) {
 		insert_code(node_root, char_value, morse_value, true); //if there is no node in tree !st node will be added at root
 	}

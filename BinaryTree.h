@@ -1,30 +1,34 @@
 #include <string>
+#include <fstream>
 #include <cctype>
 #include <iostream>
-#include <fstream>
-#ifndef BT_H
-#define BT_H
 
+#ifndef BinaryTree_H
+#define BinaryTree_H
 
 using namespace std;
-class BT {
-private:
-	struct BTNode {
-		BTNode *left_node;
-		BTNode *right_node;
-		string morse_code;
-		string node_to_add;
-	}; BTNode *tree_root_node;
 
+class BinaryTree {
+private:
+	struct BinaryTreeNode {
+	string morse_value;
+	string char_value;
+	BinaryTreeNode *left_child;
+	BinaryTreeNode *right_child;
+}; BinaryTreeNode *node_root;
 public:
-	BT();
-	~BT();
-	string decode(string user_input, bool added_node);
-	string encode(string user_input, bool added_node);
-	string text_entered();
-	void insert_code(char node_to_add, string morse_code);
-	void insert_code(BTNode *&new_node, char node_to_add, string morse_code, bool is_last);
-	bool leafNode(BTNode *node);
-	bool less_than_four(string::size_type a);
+	 BinaryTree();
+	~BinaryTree();
+
+	// SETTERS:
+	void insert_code(char char_value, string morse_value); // Inserts only root node.
+	void insert_code(BinaryTreeNode *&new_node, char char_value, string morse_value, bool last_character); // Inserts all non-root nodes.
+
+	// ENCODING AND DECODING FUNCTIONS:
+	string decode(string users_morse_string, bool added_node);
+	string encode(string users_morse_string, bool added_node);
+	string get_input();
+	bool validate_leaf(BinaryTreeNode *node);
+	bool validate_length(unsigned int a);
 };
 #endif

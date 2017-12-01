@@ -22,7 +22,7 @@ public:
 
 	// SETTERS:
 	void insert_code(char char_value, string morse_value); // Inserts only root node.
-	void insert_code(BinaryTreeNode *&new_node, char char_value, string morse_value, bool last_character); // Inserts all non-root nodes.
+	void insert_code(BinaryTreeNode *&new_node, char char_value, bool last_character); // Inserts all non-root nodes.
 
 	// ENCODING AND DECODING FUNCTIONS:
 	string decode(string users_morse_string, bool added_node);

@@ -31,18 +31,7 @@ void BinaryTree::insert_code(BinaryTreeNode *&node, char char_value, string mors
 	}
 }
 
-bool BinaryTree::validate_length(unsigned int a) {
-	if (a <= 3) {
-		return true;
-	}
-	return false;
-}
 
-bool BinaryTree::validate_leaf(BinaryTreeNode *node) {
-	if (!node->left_child && !node->right_child) {
-		return true;
-	}
-	return false;
 }
 
 string BinaryTree::decode(string users_morse_string, bool added_node) {   //That function will decode the input using BST and searching algoriyhm 

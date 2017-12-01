@@ -14,12 +14,21 @@ BinaryTree::~BinaryTree() {
 }
 
 string BinaryTree::get_input() {
+	/*
+	This function retrieves input from the user for decoding/encoding.
+	output: user entered string to decode/encode.
+	*/
 	string user_text;
 	getline(cin, user_text);
 	return user_text;
 }
 
 void BinaryTree::insert_code(BinaryTreeNode *&node, char char_value, string morse_value, bool last_character) {
+	/*
+	This function inserts the morse code into tree for later use.
+	input: node, morse character, english value, bool to confirm if it's last character.
+	output: n/a
+	*/ 
 	node = new BinaryTreeNode();
 	node->morse_value = morse_value;
 	node->right_child = NULL;
@@ -35,6 +44,9 @@ void BinaryTree::insert_code(BinaryTreeNode *&node, char char_value, string mors
 }
 
 string BinaryTree::decode(string users_morse_string, bool added_node) {   //That function will decode the input using BST and searching algoriyhm 
+	/*
+	
+	*/
 	string result = "";
 	BinaryTreeNode *node = node_root;
 	for (int index = 0; index < users_morse_string.length(); ++index) {
